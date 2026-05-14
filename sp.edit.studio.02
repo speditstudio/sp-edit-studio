@@ -1,0 +1,286 @@
+export default function SPEditStudio() { const services = [ "Photo Editing", "Video Editing", "Wedding Album Design", "Thumbnail Design", "Banner & Poster Design", "Reel & Shorts Editing", ];
+
+const gallery = [ "/mnt/data/1000257776.png", "/mnt/data/1000257789.jpg", "/mnt/data/1000257790.jpg", ];
+
+return ( <div className="bg-black text-white min-h-screen overflow-x-hidden font-sans"> {/* Loading Screen */} <div className="fixed inset-0 bg-black flex items-center justify-center z-50 animate-pulse"> <h1 className="text-5xl font-black text-yellow-400 tracking-widest"> SP EDIT STUDIO </h1> </div>
+
+{/* Navbar */}
+  <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-xl bg-black/70 border-b border-yellow-500/20">
+    <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="flex items-center gap-3">
+        <img
+          src="/mnt/data/1000257775.jpg"
+          alt="Logo"
+          className="w-14 h-14 rounded-full border border-yellow-400 object-cover"
+        />
+
+        <div>
+          <h1 className="text-2xl font-black text-yellow-400">
+            SP Edit Studio
+          </h1>
+          <p className="text-xs text-gray-400">
+            Premium Creative Agency
+          </p>
+        </div>
+      </div>
+
+      <nav className="hidden md:flex gap-8 text-sm text-gray-300 font-medium">
+        <a href="#home" className="hover:text-yellow-400 transition">Home</a>
+        <a href="#services" className="hover:text-yellow-400 transition">Services</a>
+        <a href="#gallery" className="hover:text-yellow-400 transition">Gallery</a>
+        <a href="#booking" className="hover:text-yellow-400 transition">Booking</a>
+        <a href="#contact" className="hover:text-yellow-400 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  {/* Hero */}
+  <section
+    id="home"
+    className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
+  >
+    <div className="absolute inset-0 bg-gradient-to-b from-yellow-900/10 via-black to-black"></div>
+
+    <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-500/10 blur-3xl rounded-full"></div>
+    <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-300/10 blur-3xl rounded-full"></div>
+
+    <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center pt-24">
+      <div>
+        <p className="uppercase tracking-[8px] text-yellow-400 text-sm mb-6">
+          Luxury Editing Experience
+        </p>
+
+        <h2 className="text-6xl md:text-8xl font-black leading-tight">
+          Cinematic
+          <span className="block text-yellow-400">Creative Studio</span>
+        </h2>
+
+        <p className="mt-8 text-lg text-gray-300 leading-relaxed max-w-2xl">
+          Premium photo editing, wedding album design, reels, thumbnails and cinematic video production with luxury quality.
+        </p>
+
+        <div className="flex flex-wrap gap-5 mt-10">
+          <a
+            href="https://wa.me/919547945942"
+            className="px-8 py-4 rounded-2xl bg-yellow-500 text-black font-bold shadow-2xl hover:scale-105 transition"
+          >
+            WhatsApp Now
+          </a>
+
+          <a
+            href="#booking"
+            className="px-8 py-4 rounded-2xl border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black transition"
+          >
+            Book Service
+          </a>
+        </div>
+
+        <div className="grid grid-cols-3 gap-6 mt-14">
+          <div className="bg-zinc-900/70 border border-yellow-500/20 rounded-3xl p-5 text-center">
+            <h3 className="text-4xl font-black text-yellow-400">500+</h3>
+            <p className="text-gray-400 text-sm mt-2">Projects</p>
+          </div>
+
+          <div className="bg-zinc-900/70 border border-yellow-500/20 rounded-3xl p-5 text-center">
+            <h3 className="text-4xl font-black text-yellow-400">4K</h3>
+            <p className="text-gray-400 text-sm mt-2">Quality</p>
+          </div>
+
+          <div className="bg-zinc-900/70 border border-yellow-500/20 rounded-3xl p-5 text-center">
+            <h3 className="text-4xl font-black text-yellow-400">24/7</h3>
+            <p className="text-gray-400 text-sm mt-2">Support</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative">
+        <div className="absolute -inset-4 bg-gradient-to-r from-yellow-500/20 to-yellow-300/10 blur-3xl rounded-[40px]"></div>
+
+        <img
+          src="/mnt/data/1000257776.png"
+          alt="Banner"
+          className="relative rounded-[40px] border border-yellow-500/30 shadow-[0_0_70px_rgba(255,215,0,0.2)]"
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* Services */}
+  <section id="services" className="py-24 px-6 bg-gradient-to-b from-black to-zinc-950">
+    <div className="max-w-7xl mx-auto">
+      <h3 className="text-5xl font-black text-center text-yellow-400 mb-16">
+        Premium Services
+      </h3>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        {services.map((service, i) => (
+          <div
+            key={i}
+            className="group bg-zinc-900 border border-yellow-500/20 rounded-[30px] p-8 hover:border-yellow-400 hover:-translate-y-2 transition duration-300 shadow-2xl"
+          >
+            <div className="w-16 h-16 rounded-2xl bg-yellow-500/20 flex items-center justify-center text-3xl text-yellow-400 mb-6 group-hover:scale-110 transition">
+              ✨
+            </div>
+
+            <h4 className="text-2xl font-bold mb-4">{service}</h4>
+
+            <p className="text-gray-400 leading-relaxed">
+              High-end cinematic editing with premium quality output and fast delivery support.
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Gallery Slider */}
+  <section id="gallery" className="py-24 px-6 bg-black">
+    <div className="max-w-7xl mx-auto">
+      <h3 className="text-5xl font-black text-center text-yellow-400 mb-16">
+        Gallery Showcase
+      </h3>
+
+      <div className="grid lg:grid-cols-3 gap-8">
+        {gallery.map((image, i) => (
+          <div
+            key={i}
+            className="overflow-hidden rounded-[30px] border border-yellow-500/20 shadow-2xl hover:scale-[1.02] transition"
+          >
+            <img
+              src={image}
+              alt="Gallery"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Booking */}
+  <section id="booking" className="py-24 px-6 bg-gradient-to-b from-zinc-950 to-black">
+    <div className="max-w-5xl mx-auto bg-zinc-900 border border-yellow-500/20 rounded-[40px] p-10 shadow-[0_0_80px_rgba(255,215,0,0.08)]">
+      <h3 className="text-5xl font-black text-yellow-400 text-center mb-12">
+        Online Booking System
+      </h3>
+
+      <form className="grid md:grid-cols-2 gap-6">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="bg-black border border-yellow-500/20 rounded-2xl p-5 outline-none focus:border-yellow-400"
+        />
+
+        <input
+          type="tel"
+          placeholder="Phone Number"
+          className="bg-black border border-yellow-500/20 rounded-2xl p-5 outline-none focus:border-yellow-400"
+        />
+
+        <input
+          type="email"
+          placeholder="Email Address"
+          className="bg-black border border-yellow-500/20 rounded-2xl p-5 outline-none focus:border-yellow-400 md:col-span-2"
+        />
+
+        <select className="bg-black border border-yellow-500/20 rounded-2xl p-5 outline-none focus:border-yellow-400 md:col-span-2">
+          <option>Select Service</option>
+          {services.map((service, i) => (
+            <option key={i}>{service}</option>
+          ))}
+        </select>
+
+        <textarea
+          rows="6"
+          placeholder="Project Details"
+          className="bg-black border border-yellow-500/20 rounded-2xl p-5 outline-none focus:border-yellow-400 md:col-span-2"
+        ></textarea>
+
+        <button
+          type="submit"
+          className="md:col-span-2 py-5 rounded-2xl bg-yellow-500 text-black text-xl font-black hover:scale-[1.01] transition"
+        >
+          Send Booking Request
+        </button>
+      </form>
+    </div>
+  </section>
+
+  {/* Admin Panel Preview */}
+  <section className="py-24 px-6 bg-black">
+    <div className="max-w-7xl mx-auto">
+      <h3 className="text-5xl font-black text-yellow-400 text-center mb-16">
+        Admin Panel
+      </h3>
+
+      <div className="grid lg:grid-cols-3 gap-8">
+        {[
+          "Manage Gallery",
+          "Update Services",
+          "Check Bookings",
+        ].map((item, i) => (
+          <div
+            key={i}
+            className="bg-zinc-900 rounded-[30px] border border-yellow-500/20 p-10 text-center shadow-2xl"
+          >
+            <div className="text-5xl mb-6">⚙️</div>
+            <h4 className="text-2xl font-bold">{item}</h4>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* SEO Section */}
+  <section className="py-20 px-6 bg-zinc-950 border-t border-yellow-500/10 border-b">
+    <div className="max-w-6xl mx-auto text-center">
+      <h3 className="text-4xl font-black text-yellow-400 mb-8">
+        SEO & Google Ranking Ready
+      </h3>
+
+      <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+        This website is optimized for Google search visibility, fast loading speed, mobile responsiveness and premium user experience.
+      </p>
+    </div>
+  </section>
+
+  {/* Contact */}
+  <section id="contact" className="py-24 px-6 bg-black">
+    <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+      <div>
+        <h3 className="text-5xl font-black text-yellow-400 mb-10">
+          Contact SP Edit Studio
+        </h3>
+
+        <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+          <p>📍 Patirajpur Near 5no Patirajpur Gram Panchayat, Itahar, Uttar Dinajpur</p>
+          <p>📞 9547945942</p>
+          <p>📧 speditstudiohelp@gmail.com</p>
+        </div>
+      </div>
+
+      <div className="overflow-hidden rounded-[40px] border border-yellow-500/20 shadow-2xl">
+        <img
+          src="/mnt/data/1000257790.jpg"
+          alt="Studio"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* Footer */}
+  <footer className="border-t border-yellow-500/20 py-8 text-center text-gray-500 text-sm bg-black">
+    © 2026 SP Edit Studio • Luxury Premium Creative Agency
+  </footer>
+
+  {/* Floating WhatsApp */}
+  <a
+    href="https://wa.me/919547945942"
+    className="fixed bottom-6 right-6 z-50 px-6 py-4 rounded-full bg-yellow-500 text-black font-black shadow-[0_0_40px_rgba(255,215,0,0.4)] hover:scale-110 transition"
+  >
+    WhatsApp
+  </a>
+</div>
+
+); }
